@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CrudSpringApplication",
+            "request": "launch",
+            "mainClass": "com.wesley.CrudSpringApplication",
+            "projectName": "crud-spring"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CrudSpringApplication<crud-spring>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.wesley.crudspring.CrudSpringApplication",
+            "projectName": "crud-spring",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
