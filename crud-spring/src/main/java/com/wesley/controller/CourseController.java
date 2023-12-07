@@ -23,8 +23,6 @@ public class CourseController {
         this.courseRepository = courseRepository;
     }
 
-
-
     @GetMapping
     public List<Course> list() {
         return courseRepository.findAll();
