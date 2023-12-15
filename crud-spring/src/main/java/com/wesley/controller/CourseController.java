@@ -8,6 +8,7 @@ import com.wesley.repository.CourseRepository;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -26,5 +27,10 @@ public class CourseController {
     @GetMapping
     public List<Course> list() {
         return courseRepository.findAll();
+    }
+
+    @PostMapping
+    public void create() {
+
     }
 }
