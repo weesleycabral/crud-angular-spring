@@ -24,7 +24,7 @@ export class CoursesService {
   ) { }
 
   list() {
-    return this.http.get<Course[]>(this.API, {headers: this.Headers()}).pipe(
+    return this.http.get<Course[]>(this.API, /* {headers: this.Headers()} */).pipe(
       first(),
       // delay(5000),
       tap(courses => console.log(courses)),
@@ -33,6 +33,6 @@ export class CoursesService {
   }
 
   save(record: Course) {
-    return this.http.post<Course>(this.API, record, {headers: this.Headers()})
+    return this.http.post<Course>(this.API, record,  {headers: this.Headers()} )
   }
 }
