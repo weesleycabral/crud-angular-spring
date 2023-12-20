@@ -1,5 +1,8 @@
 package com.wesley.controller;
 
+import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.wesley.model.Course;
@@ -24,7 +27,10 @@ public class CourseController {
     }
 
     @PostMapping
-    public void create(@RequestBody String json) {
-        System.out.println(json);
+    @ResponseStatus(code = HttpStatus.CREATED)
+    public Course create(@RequestBody Course json) {
+        // System.out.println(json);
+        return courseRepository.save(json);
+
     }
 }
